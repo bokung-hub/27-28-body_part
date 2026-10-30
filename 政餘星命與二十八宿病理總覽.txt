@@ -1,0 +1,558 @@
+請對應政餘28宿與人體身體部位對應的關係，並詳細說明政餘星命學中，當凶星落入特定二十八宿時，如何推算命主的身體健康與病痛位置。
+同時列出 12地支|對應的政餘28宿(以一字表示)|對應的人體部位的列表。
+最後統合成一個html表
+
+
+=======
+# 政餘二十八宿與人體對應：推算方式與整合列表
+
+## 一、需要先說明的範圍與依據
+
+政餘星命學（果老星宗一系，以七政、四餘、二十八宿為骨幹）中，二十八宿與人體的對應並非只有一套固定說法。主要來源有二：
+
+1. **《二十八宿分野》與《宿曜經》系統**：以宿配臟腑、配身體部位，屬於印度宿曜（二十八宿為二十七宿制加一）傳入後與中土分野、臟象合流的產物。
+2. **後世政餘家（明清以降）實務用法**：把二十八宿再對應十二地支（每支配二或三宿），並以「宿—地支配對」落到身體部位與經脈。
+
+所以下列內容是**這些傳統系統中較通行的一種整理**，並非全體政餘家一致同意的唯一版本；不同師承在「某宿究竟配某部位」上會有出入。凡我有疑慮處會標示。
+
+我按你的要求做三件事：（1）講對應原理；（2）講凶星入宿的推算方法；（3）給你 12 地支 ↔ 28 宿 ↔ 人體部位的表，並整合成 HTML。
+
+---
+
+## 二、二十八宿對人體的基本原理
+
+政餘的思路不是「一宿對一個器官」這麼簡單，而是三層疊加：
+
+- **宿 → 地支（宮）**：二十八宿分布於十二宮（地支），每宮二或三宿。宿落哪一宮，就帶上該宮的五行與身體部位屬性。
+- **宿 → 四象（四方七宿）**：東方蒼龍（角亢氐房心尾箕）、北方玄武（斗牛女虛危室壁）、西方白虎（奎婁胃昴畢觜參）、南方朱雀（井鬼柳星張翼軫）。四象各主一身之「上/下、陰/陽、左/右」大區塊。
+- **宿 → 臟腑**：多數宿有傳統的臟象配屬（如角宿主肝、心宿主心、胃宿主脾胃、虛宿主腎等），這部分各家差異最大。
+
+凶星（火、土、羅、計、孛，以及失陷之金水日月）入宿時，是「**該宿的身體部位 + 該宿所落宮位的部位**」兩者疊加取象，再看凶星本身的性質（火主炎症熱症、土主積聚寒濕、羅計主手術刀傷與突發、孛主水濕腫脹與血疾）決定病性。
+
+---
+
+## 三、凶星入宿推算健康與病痛位置的步驟
+
+依政餘實務，可整理為五步：
+
+**第一步：定位**
+
+看命盤中凶星所在之宿（黃道二十八宿位置），記下：宿名、所落宮（地支）、所落宮的度數、星曜本身的廟旺落陷。
+
+**第二步：取象兩源**
+
+- 從「宿」取身體部位（該宿傳統臟象）；
+- 從「宮（地支）」取身體部位與經脈（如子主腎、亥主頭、辰主胃脘等）。
+兩者若一致，病位明確；若不一致，以「宿為體、宮為用」，即宿定發病之臟器，宮定外顯部位或經絡路徑。
+
+**第三步：定病性（由凶星性質）**
+
+| 凶星 | 病性取象 |
+|---|---|
+| 火星（及計都偏火時） | 炎症、發熱、外傷、出血、急性 |
+| 土星 | 積聚、寒濕、慢性、骨節、遲滯 |
+| 羅睺 | 突發、腫瘤、異物、手術、中毒 |
+| 計都 | 刀傷、斷裂、舊疾復發、隱疾 |
+| 孛星（月孛） | 水濕、腫脹、血疾、婦科、泌尿 |
+| 失陷之日/月 | 元氣虛、眼疾、精神耗弱 |
+
+**第四步：看宿的吉凶「體性」**
+
+二十八宿本身有吉宿、凶宿之分（如角、房、心、虛、畢、觜、參、鬼、軫等常列為多凶或多災之宿）。凶星落凶宿，其象加重；凶星落吉宿，則病較輕、或病在表。
+
+**第五步：合參宮主、宿度主與流年**
+
+- 該宿所落宮的**宮主星**若也受傷，病位由「可能」升為「確指」。
+- **宿度主**（如角宿度主木、亢宿度主金等，各家不同）受傷亦同論。
+- **流年宿**：行限或流年凶星過本命之宿或其對宮宿，為發病之年。
+
+---
+
+## 四、12 地支 ↔ 28 宿 ↔ 人體部位 對照表
+
+（宿以一字表示；每宮二至三宿，故一格有時列兩字。地支與二十八宿的對應採傳統「十二宮配宿」通行的分法。）
+
+| 地支 | 對應二十八宿（一字） | 對應人體部位 |
+|---|---|---|
+| 子 | 女、虛 | 腎、膀胱、下焦、耳、生殖器 |
+| 丑 | 斗、牛 | 脾胃、腰、腹部、足脛 |
+| 寅 | 尾、箕 | 膽、肝之表、坐骨、大腿、下肢關節 |
+| 卯 | 氐、房 | 肝、目、脅肋、手指 |
+| 辰 | 亢、角 | 胃脘、肩、胸膈、皮膚 |
+| 巳 | 翼、軫 | 心、小腸、面、咽喉、上肢（臂） |
+| 午 | 張、星 | 心、背、目、血脈 |
+| 未 | 柳、鬼 | 脾、腹中、脊、頭面 |
+| 申 | 觜、參 | 肺、大腸、大腸、鼻、肩背、骨節 |
+| 酉 | 畢、昴 | 肺、氣管、口、齒、腰 |
+| 戌 | 婁、胃 | 胃、脾之表、足膝、腹壁 |
+| 亥 | 室、壁 | 腎之表、頭、腦、足、精室 |
+
+補充：斗宿、牛宿亦有配丑；危宿、室宿、壁宿皆屬北宮，危宿常另配子或亥，此為主要分歧點之一。心宿、房宿之屬卯或屬寅，各家亦有出入。上表採「角亢在辰、氐房在卯、尾箕在寅」一派。
+
+---
+
+## 五、HTML 表格
+
+```html
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>政餘二十八宿 · 十二地支 · 人體部位對照表</title>
+<style>
+  body { font-family: "Noto Serif TC", "PMingLiU", serif; background:#faf7f2; color:#2b2b2b; padding:24px; }
+  h1 { font-size:1.4rem; letter-spacing:.05em; border-bottom:2px solid #8b6f47; padding-bottom:8px; }
+  table { border-collapse:collapse; width:100%; max-width:900px; background:#fff; box-shadow:0 1px 4px rgba(0,0,0,.08); }
+  caption { caption-side:top; text-align:left; font-size:.9rem; color:#6b5b45; padding:8px 0; }
+  th, td { border:1px solid #d8cfc0; padding:10px 12px; font-size:.95rem; }
+  thead th { background:#8b6f47; color:#fff; font-weight:600; letter-spacing:.08em; }
+  tbody tr:nth-child(even) { background:#f5f0e6; }
+  td:nth-child(2) { text-align:center; font-size:1.15rem; letter-spacing:.3em; color:#7a3b2e; }
+  td:nth-child(4) { font-size:.88rem; color:#5a5a5a; }
+  footer { margin-top:16px; font-size:.8rem; color:#8a7f70; line-height:1.7; max-width:900px; }
+</style>
+</head>
+<body>
+
+<h1>政餘二十八宿 × 十二地支 × 人體部位 對照</h1>
+
+<table>
+  <caption>宿以一字表之；同宮列二宿以上者，依序排列。</caption>
+  <thead>
+    <tr>
+      <th>地支</th>
+      <th>對應二十八宿</th>
+      <th>對應人體部位</th>
+      <th>凶星入此宿之常見病症取向</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>子</td>
+      <td>女&#12288;虛</td>
+      <td>腎、膀胱、下焦、耳、生殖器</td>
+      <td>土孛→水腫下焦寒濕；火羅→泌尿炎症、血尿</td>
+    </tr>
+    <tr>
+      <td>丑</td>
+      <td>斗&#12288;牛</td>
+      <td>脾胃、腰、腹部、足脛</td>
+      <td>土→腹脹積聚；火→口舌胃熱；計→腰痛舊疾</td>
+    </tr>
+    <tr>
+      <td>寅</td>
+      <td>尾&#12288;箕</td>
+      <td>膽、肝之表、坐骨、大腿、下肢關節</td>
+      <td>火羅→風濕關節熱腫；計→腿足折傷</td>
+    </tr>
+    <tr>
+      <td>卯</td>
+      <td>氐&#12288;房</td>
+      <td>肝、目、脅肋、手指</td>
+      <td>火→目赤肝炎；土→脅脹；孛→目翳</td>
+    </tr>
+    <tr>
+      <td>辰</td>
+      <td>亢&#12288;角</td>
+      <td>胃脘、肩、胸膈、皮膚</td>
+      <td>火羅→肩癰瘡毒；土→胸膈痞塞</td>
+    </tr>
+    <tr>
+      <td>巳</td>
+      <td>翼&#12288;軫</td>
+      <td>心、小腸、面、咽喉、臂</td>
+      <td>火→咽痛面瘡；孛→臂腫；計→喉疾</td>
+    </tr>
+    <tr>
+      <td>午</td>
+      <td>張&#12288;星</td>
+      <td>心、背、目、血脈</td>
+      <td>火羅→心痛血疾；土→背冷；孛→目疾</td>
+    </tr>
+    <tr>
+      <td>未</td>
+      <td>柳&#12288;鬼</td>
+      <td>脾、腹中、脊、頭面</td>
+      <td>火羅→頭面瘡毒、鬼祟驚疾；土→脾虛</td>
+    </tr>
+    <tr>
+      <td>申</td>
+      <td>觜&#12288;參</td>
+      <td>肺、大腸、鼻、肩背、骨節</td>
+      <td>土→骨節痛؛ 火→鼻衄咳血；計→肩背傷</td>
+    </tr>
+    <tr>
+      <td>酉</td>
+      <td>畢&#12288;昴</td>
+      <td>肺、氣管、口、齒、腰</td>
+      <td>火→牙痛喉症；土→氣喘腰重；孛→痰濕</td>
+    </tr>
+    <tr>
+      <td>戌</td>
+      <td>婁&#12288;胃</td>
+      <td>胃、脾之表、足膝、腹壁</td>
+      <td>土→胃積膝冷；火→胃火口瘡</td>
+    </tr>
+    <tr>
+      <td>亥</td>
+      <td>室&#12288;壁</td>
+      <td>腎之表、頭、腦、足、精室</td>
+      <td>孛→精室濕疾；羅→頭風；計→足傷</td>
+    </tr>
+  </tbody>
+</table>
+
+<footer>
+  說明：二十八宿與十二宮、臟象的配屬，各家師承不一（尤其丑宮之斗牛、亥子之交的危室壁、房心之屬卯或屬寅）。<br>
+  本表採通行之「角亢在辰、氐房在卯、尾箕在寅」一派，凶星病症取向為取象示例，非絕對斷語。<br>
+  實務仍須合參宮主星、宿度主、廟旺落陷與流年行限。
+</footer>
+
+</body>
+</html>
+```
+
+---
+
+## 六、兩點誠實提醒
+
+1. **對應表有流派差異。** 尤其「危宿」到底歸子還是歸亥、「房心」歸卯或歸寅、「斗牛」之丑與子之交，明清政餘書與《宿曜經》系統並不一致。若你有特定師承的盤式，請以該派為準；我可以依你提供的分法重排此表。
+2. **「凶星入宿→斷病位」在政餘中屬輔助取象**，正式斷病仍以「命宮—疾厄宮—宮主星—流年」為主軸，宿配多作細部定位與病性修飾之用。若把它當成唯一依據，容易斷得過實。
+
+如果你手上有具體命盤（哪顆凶星落哪宿、哪宮），我可以照上面五步直接把推論過程走一遍給你看，或依你師承的宿宮分法把表改成你要的版本。
+
+
+=========
+如果只把政餘28宿對應身體部位你幫我列出並作html
+
+
+# 二十八宿 → 人體部位 對照
+
+這裡只保留單純的「一宿對應一部位」關係，不涉地支、不涉凶星斷法。同樣提醒：宿配臟象各家有出入（尤其虛危、房心、觜參幾宿），下表採較通行的一派，異說會在表後註明。
+
+## 二十八宿人體對應表
+
+| 宿 | 所屬四象 | 對應人體部位 |
+|---|---|---|
+| 角 | 東方蒼龍 | 肝、頭頂、肩 |
+| 亢 | 東方蒼龍 | 頸項、咽喉、胃脘 |
+| 氐 | 東方蒼龍 | 胸脅、腹、手指 |
+| 房 | 東方蒼龍 | 心、血脈、眼 |
+| 心 | 東方蒼龍 | 心臟、胸、臂 |
+| 尾 | 東方蒼龍 | 尾閭、腰脊、坐骨 |
+| 箕 | 東方蒼龍 | 腹、腸、大腿 |
+| 斗 | 北方玄武 | 胃、脾、腹 |
+| 牛 | 北方玄武 | 脾、腰、足脛 |
+| 女 | 北方玄武 | 腎、膀胱、耳 |
+| 虛 | 北方玄武 | 腎、下焦、生殖器 |
+| 危 | 北方玄武 | 腰、脊、足 |
+| 室 | 北方玄武 | 頭、腦、精室 |
+| 壁 | 北方玄武 | 肩背、皮膚、足 |
+| 奎 | 西方白虎 | 腰、足、腹壁 |
+| 婁 | 西方白虎 | 胃、膝、足 |
+| 胃 | 西方白虎 | 胃、脾、腹 |
+| 昴 | 西方白虎 | 肺、氣管、口齒 |
+| 畢 | 西方白虎 | 肺、鼻、腰 |
+| 觜 | 西方白虎 | 肺、頭面、鼻 |
+| 參 | 西方白虎 | 大腸、肩背、骨節 |
+| 井 | 南方朱雀 | 脾、腹、耳目 |
+| 鬼 | 南方朱雀 | 頭面、脊、心腹 |
+| 柳 | 南方朱雀 | 脾、腹中、咽 |
+| 星 | 南方朱雀 | 心、背、血脈 |
+| 張 | 南方朱雀 | 心、胸、目 |
+| 翼 | 南方朱雀 | 小腸、面、咽喉、臂 |
+| 軫 | 南方朱雀 | 心、腹、足 |
+
+## 異說備註
+
+- **虛宿**：一派主「腎」，一派主「尻骨、下竅」，亦有併入女宿同論者。
+- **房宿**：多主「心之表、血脈」，亦有主「腹脅」者。
+- **觜宿**：一派主「肺、頭面」，一派與參宿併論「大腸」。
+- **鬼宿**：主「頭面」，部分流派直接作「心腹」。
+- **奎宿**：有主「腰足」者，也有作「腹壁」者，差異較大。
+
+---
+
+```html
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>二十八宿 × 人體部位對照</title>
+<style>
+  body {
+    font-family: "Noto Serif TC", "PMingLiU", serif;
+    background: #faf7f2;
+    color: #2b2b2b;
+    padding: 28px;
+    line-height: 1.6;
+  }
+  h1 {
+    font-size: 1.45rem;
+    letter-spacing: .08em;
+    border-bottom: 2px solid #8b6f47;
+    padding-bottom: 10px;
+    margin-bottom: 6px;
+  }
+  .sub {
+    font-size: .85rem;
+    color: #7a6b55;
+    margin-bottom: 18px;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 760px;
+    background: #fff;
+    box-shadow: 0 1px 5px rgba(0,0,0,.08);
+  }
+  thead th {
+    background: #8b6f47;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: .1em;
+    padding: 11px 14px;
+    font-size: .95rem;
+  }
+  td {
+    border: 1px solid #ddd3c4;
+    padding: 9px 14px;
+    font-size: .95rem;
+  }
+  td:nth-child(1) {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #7a3b2e;
+    width: 70px;
+  }
+  td:nth-child(2) {
+    color: #6b5b45;
+    font-size: .88rem;
+    width: 130px;
+  }
+  tbody tr:nth-child(even) { background: #f5f0e6; }
+  tbody tr:hover { background: #efe6d6; }
+  /* 四象分組上緣線 */
+  .east td, .north td, .west td, .south td { border-top: 2px solid #8b6f47; }
+  .grp {
+    text-align: center;
+    font-size: .8rem;
+    letter-spacing: .3em;
+    color: #fff;
+    background: #6b5b45;
+    padding: 6px;
+  }
+  footer {
+    margin-top: 18px;
+    max-width: 760px;
+    font-size: .8rem;
+    color: #8a7f70;
+    line-height: 1.8;
+    border-top: 1px dashed #d8cfc0;
+    padding-top: 12px;
+  }
+</style>
+</head>
+<body>
+
+<h1>二十八宿 × 人體部位對照</h1>
+<div class="sub">政餘星命學 · 宿象配屬 · 採通行一派</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>宿</th>
+      <th>四象</th>
+      <th>對應人體部位</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="grp east"><td colspan="3">東 方 蒼 龍</td></tr>
+    <tr><td>角</td><td>蒼龍</td><td>肝、頭頂、肩</td></tr>
+    <tr><td>亢</td><td>蒼龍</td><td>頸項、咽喉、胃脘</td></tr>
+    <tr><td>氐</td><td>蒼龍</td><td>胸脅、腹、手指</td></tr>
+    <tr><td>房</td><td>蒼龍</td><td>心、血脈、眼</td></tr>
+    <tr><td>心</td><td>蒼龍</td><td>心臟、胸、臂</td></tr>
+    <tr><td>尾</td><td>蒼龍</td><td>尾閭、腰脊、坐骨</td></tr>
+    <tr><td>箕</td><td>蒼龍</td><td>腹、腸、大腿</td></tr>
+
+    <tr class="grp north"><td colspan="3">北 方 玄 武</td></tr>
+    <tr><td>斗</td><td>玄武</td><td>胃、脾、腹</td></tr>
+    <tr><td>牛</td><td>玄武</td><td>脾、腰、足脛</td></tr>
+    <tr><td>女</td><td>玄武</td><td>腎、膀胱、耳</td></tr>
+    <tr><td>虛</td><td>玄武</td><td>腎、下焦、生殖器</td></tr>
+    <tr><td>危</td><td>玄武</td><td>腰、脊、足</td></tr>
+    <tr><td>室</td><td>玄武</td><td>頭、腦、精室</td></tr>
+    <tr><td>壁</td><td>玄武</td><td>肩背、皮膚、足</td></tr>
+
+    <tr class="grp west"><td colspan="3">西 方 白 虎</td></tr>
+    <tr><td>奎</td><td>白虎</td><td>腰、足、腹壁</td></tr>
+    <tr><td>婁</td><td>白虎</td><td>胃、膝、足</td></tr>
+    <tr><td>胃</td><td>白虎</td><td>胃、脾、腹</td></tr>
+    <tr><td>昴</td><td>白虎</td><td>肺、氣管、口齒</td></tr>
+    <tr><td>畢</td><td>白虎</td><td>肺、鼻、腰</td></tr>
+    <tr><td>觜</td><td>白虎</td><td>肺、頭面、鼻</td></tr>
+    <tr><td>參</td><td>白虎</td><td>大腸、肩背、骨節</td></tr>
+
+    <tr class="grp south"><td colspan="3">南 方 朱 雀</td></tr>
+    <tr><td>井</td><td>朱雀</td><td>脾、腹、耳目</td></tr>
+    <tr><td>鬼</td><td>朱雀</td><td>頭面、脊、心腹</td></tr>
+    <tr><td>柳</td><td>朱雀</td><td>脾、腹中、咽</td></tr>
+    <tr><td>星</td><td>朱雀</td><td>心、背、血脈</td></tr>
+    <tr><td>張</td><td>朱雀</td><td>心、胸、目</td></tr>
+    <tr><td>翼</td><td>朱雀</td><td>小腸、面、咽喉、臂</td></tr>
+    <tr><td>軫</td><td>朱雀</td><td>心、腹、足</td></tr>
+  </tbody>
+</table>
+
+<footer>
+  異說註：虛宿一派主「尻骨下竅」；房宿一派主「腹脅」；觜宿一派與參宿併論「大腸」；鬼宿一派逕作「心腹」；奎宿一派主「腹壁」。<br>
+  本表僅列宿—部位對應，未涉地支、凶星斷法；實務仍須合參宮位與星曜廟陷。
+</footer>
+
+</body>
+</html>
+```
+
+若你有特定師承的宿配版本（例如虛宿主「尻骨」而非「腎」），把你那派的條目給我，我直接改表。
+
+=========
+只把12地支對應身體部位你幫我列出並作html
+
+
+# 十二地支 → 人體部位對照
+
+單純保留「地支 ↔ 人體部位」這層關係，不涉宿、不涉星曜。地支配身體有兩個常見取徑：一是**臟腑（十二臟象）**、一是**身形（由頭至足的體位分布）**。兩者常並列使用，下表兩者都給，方便你依需求取用。
+
+## 十二地支人體對應表
+
+| 地支 | 對應臟腑 | 對應身形／部位 |
+|---|---|---|
+| 子 | 腎、膀胱 | 下焦、耳、生殖器、足底 |
+| 丑 | 脾、胃 | 腹部、腰、足脛 |
+| 寅 | 膽 | 坐骨、大腿、下肢關節 |
+| 卯 | 肝 | 脅肋、手指、目 |
+| 辰 | 胃、脾 | 胸膈、肩、皮膚 |
+| 巳 | 心、小腸 | 面、咽喉、上臂 |
+| 午 | 心 | 背、頭頂、血脈、目 |
+| 未 | 脾、小腸 | 腹中、脊、頭面 |
+| 申 | 肺、大腸 | 肩背、骨節、鼻 |
+| 酉 | 肺、大腸 | 口、齒、氣管、腰 |
+| 戌 | 胃、心包 | 腹壁、足膝、腿 |
+| 亥 | 腎、三焦 | 頭、腦、足、精室 |
+
+一點差異提醒：地支的「身形取象」有多種排法。常見的是**由下而上**（子為下焦、亥為頭頂，倒序配身形）；也有把**午定為頭、子定為足**的正序排法。上表身形欄採「子在下、亥在頭」這一較通行的政餘／子平共用排法。若你用正序（午為頭），把身形欄整欄反轉即可。
+
+```html
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>十二地支 × 人體部位對照</title>
+<style>
+  body {
+    font-family: "Noto Serif TC", "PMingLiU", serif;
+    background: #faf7f2;
+    color: #2b2b2b;
+    padding: 28px;
+    line-height: 1.6;
+  }
+  h1 {
+    font-size: 1.45rem;
+    letter-spacing: .1em;
+    border-bottom: 2px solid #8b6f47;
+    padding-bottom: 10px;
+    margin-bottom: 4px;
+  }
+  .sub {
+    font-size: .85rem;
+    color: #7a6b55;
+    margin-bottom: 18px;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 720px;
+    background: #fff;
+    box-shadow: 0 1px 5px rgba(0,0,0,.08);
+  }
+  thead th {
+    background: #8b6f47;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: .12em;
+    padding: 11px 14px;
+    font-size: .95rem;
+  }
+  td {
+    border: 1px solid #ddd3c4;
+    padding: 10px 14px;
+    font-size: .95rem;
+    vertical-align: middle;
+  }
+  td:nth-child(1) {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #7a3b2e;
+    width: 68px;
+    font-weight: 600;
+  }
+  td:nth-child(2) {
+    color: #6b5b45;
+    width: 130px;
+  }
+  tbody tr:nth-child(even) { background: #f5f0e6; }
+  tbody tr:hover { background: #efe6d6; }
+  footer {
+    margin-top: 18px;
+    max-width: 720px;
+    font-size: .8rem;
+    color: #8a7f70;
+    line-height: 1.8;
+    border-top: 1px dashed #d8cfc0;
+    padding-top: 12px;
+  }
+</style>
+</head>
+<body>
+
+<h1>十二地支 × 人體部位對照</h1>
+<div class="sub">臟腑取象 · 身形取象 · 兩欄並列</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>地支</th>
+      <th>對應臟腑</th>
+      <th>對應身形／部位</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>子</td><td>腎、膀胱</td><td>下焦、耳、生殖器、足底</td></tr>
+    <tr><td>丑</td><td>脾、胃</td><td>腹部、腰、足脛</td></tr>
+    <tr><td>寅</td><td>膽</td><td>坐骨、大腿、下肢關節</td></tr>
+    <tr><td>卯</td><td>肝</td><td>脅肋、手指、目</td></tr>
+    <tr><td>辰</td><td>胃、脾</td><td>胸膈、肩、皮膚</td></tr>
+    <tr><td>巳</td><td>心、小腸</td><td>面、咽喉、上臂</td></tr>
+    <tr><td>午</td><td>心</td><td>背、頭頂、血脈、目</td></tr>
+    <tr><td>未</td><td>脾、小腸</td><td>腹中、脊、頭面</td></tr>
+    <tr><td>申</td><td>肺、大腸</td><td>肩背、骨節、鼻</td></tr>
+    <tr><td>酉</td><td>肺、大腸</td><td>口、齒、氣管、腰</td></tr>
+    <tr><td>戌</td><td>胃、心包</td><td>腹壁、足膝、腿</td></tr>
+    <tr><td>亥</td><td>腎、三焦</td><td>頭、腦、足、精室</td></tr>
+  </tbody>
+</table>
+
+<footer>
+  身形欄採「子在下焦、亥在頭腦」之通行排法；另有以「午為頭、子為足」的正序排法，此時身形欄整欄反轉即可。<br>
+  臟腑欄各家略有出入（如辰戌丑未之脾胃分屬、亥之三焦或心包），本表採較通用者。
+</footer>
+
+</body>
+</html>
+```
+
+若你需要的是正序排法（午為頭、子為足）的版本，或想改用子平另一套「十二支配身形」排法，告訴我，我直接重排。
+
+
+=======

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>二十七宿身體對應圓盤</title>
+<style>
+  :root{
+    --gold:#c9a227;
+    --ink:#26221c;
+    --paper:#faf6ec;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    padding:36px 16px 72px;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Noto Serif TC","Songti TC","PMingLiU",serif;
+  }
+  h1{
+    text-align:center;
+    font-size:26px;
+    letter-spacing:.14em;
+    font-weight:600;
+    margin:0 0 8px;
+  }
+  .sub{
+    text-align:center;
+    font-size:14px;
+    color:#7a6f5c;
+    letter-spacing:.07em;
+    margin-bottom:30px;
+    line-height:1.8;
+  }
+  .wheel-wrap{
+    display:flex;
+    justify-content:center;
+    margin-bottom:52px;
+  }
+  svg{max-width:100%;height:auto}
+
+  .ring-outer{fill:#fffdf7;stroke:var(--gold);stroke-width:2}
+  .ring-band{fill:#fdf8ec;stroke:#e0d4b4;stroke-width:1}
+  .ring-band.alt{fill:#f6efdf}
+  .sector-line{stroke:#d5c69f;stroke-width:.9}
+  .cardinal-line{stroke:var(--gold);stroke-width:2.2;stroke-opacity:.55}
+
+  .nak-label{
+    font-size:19px;
+    fill:var(--ink);
+    letter-spacing:.04em;
+  }
+  .sa-label{
+    font-size:12px;
+    fill:#8a7c63;
+    letter-spacing:.03em;
+  }
+  .star-label{
+    font-size:25px;
+    fill:#6b5c46;
+  }
+  .planet-label{
+    font-size:22px;
+    fill:#b08d1e;
+  }
+  .cardinal-label{
+    font-size:18px;
+    fill:#a8860f;
+    font-weight:600;
+    letter-spacing:.14em;
+  }
+  .deg-label{
+    font-size:13px;
+    fill:#a2957c;
+    letter-spacing:.04em;
+  }
+  .core-label{
+    font-size:15px;
+    fill:#b3a586;
+    letter-spacing:.3em;
+  }
+
+  .list-wrap{max-width:1000px;margin:0 auto}
+  table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:15.5px;
+    background:#fffdf7;
+  }
+  caption{
+    font-size:17px;
+    letter-spacing:.1em;
+    padding:0 0 12px;
+    color:#5b4f3a;
+    text-align:left;
+    font-weight:600;
+  }
+  th,td{
+    border:1px solid #e4dac2;
+    padding:9px 12px;
+    text-align:left;
+    vertical-align:middle;
+  }
+  th{
+    background:#f1e7d0;
+    font-weight:600;
+    letter-spacing:.05em;
+    white-space:nowrap;
+    font-size:15px;
+  }
+  td.num{text-align:center;color:#9a8a6d;font-size:14.5px}
+  td.planet{text-align:center;white-space:nowrap;font-size:15.5px}
+  td.star{text-align:center;font-size:21px}
+  td.body{font-size:15.5px}
+  tbody tr:nth-child(even) td{background:#fbf6ea}
+  .sym{font-size:18px;color:#b08d1e}
+</style>
+</head>
+<body>
+
+<h1>二十七宿 ‧ 身體部位對應圓盤</h1>
+<div class="sub">
+  婁宿 9 點 ‧ 井宿 6 點 ‧ 角宿 3 點 ‧ 斗宿 12 點 ‧ 奎宿收於 9 點<br>
+  逆時針月宿序：9 點 → 6 點 → 3 點 → 12 點
+</div>
+
+<div class="wheel-wrap">
+<svg viewBox="0 0 840 840" width="840" height="840" role="img"
+     aria-label="二十七宿圓盤，婁宿九點、井宿六點、角宿三點、斗宿十二點，逆時針排列">
+  <g id="wheel" transform="translate(420,420)"></g>
+</svg>
+</div>
+
+<div class="list-wrap">
+<table>
+<caption>逐宿明細（由婁宿至奎宿，依圓盤逆時針順序）</caption>
+<thead>
+<tr>
+  <th>#</th>
+  <th>月宿</th>
+  <th>梵名</th>
+  <th>行星</th>
+  <th>對應中原星宿</th>
+  <th>對應身體部位</th>
+</tr>
+</thead>
+<tbody id="tbody"></tbody>
+</table>
+</div>
+
+<script>
+/* ===== 27 宿資料，index 0 = 婁宿 ===== */
+const data = [
+  {cn:"婁宿", sa:"Ashwini",          planet:"Ketu",    sym:"☋", star:"婁", body:"膝蓋、上腿"},
+  {cn:"胃宿", sa:"Bharani",          planet:"Venus",   sym:"♀", star:"胃", body:"頭部（眼、口）"},
+  {cn:"昴宿", sa:"Krittika",         planet:"Sun",     sym:"☉", star:"昴", body:"臀部、腰"},
+  {cn:"畢宿", sa:"Rohini",           planet:"Moon",    sym:"☽", star:"畢", body:"小腿、腳踝"},
+  {cn:"觜宿", sa:"Mrigashira",       planet:"Mars",    sym:"♂", star:"觜", body:"眼睛、眉"},
+  {cn:"參宿", sa:"Ardra",            planet:"Rahu",    sym:"☊", star:"參", body:"頭髮、頭"},
+  {cn:"井宿", sa:"Punarvasu",        planet:"Jupiter", sym:"♃", star:"井", body:"手指、鼻"},
+  {cn:"鬼宿", sa:"Pushya",           planet:"Saturn",  sym:"♄", star:"鬼", body:"口、臉"},
+  {cn:"柳宿", sa:"Ashlesha",         planet:"Mercury", sym:"☿", star:"柳", body:"耳朵、關節"},
+  {cn:"星宿", sa:"Magha",            planet:"Ketu",    sym:"☋", star:"星", body:"鼻子、唇"},
+  {cn:"張宿", sa:"Purva Phalguni",   planet:"Venus",   sym:"♀", star:"張", body:"生殖器官（右）"},
+  {cn:"翼宿", sa:"Uttara Phalguni",  planet:"Sun",     sym:"☉", star:"翼", body:"生殖器官（左）"},
+  {cn:"軫宿", sa:"Hasta",            planet:"Moon",    sym:"☽", star:"軫", body:"手、手掌"},
+  {cn:"角宿", sa:"Chitra",           planet:"Mars",    sym:"♂", star:"角", body:"頸、額"},
+  {cn:"亢宿", sa:"Swati",            planet:"Rahu",    sym:"☊", star:"亢", body:"胸口、齒"},
+  {cn:"氐宿", sa:"Vishakha",         planet:"Jupiter", sym:"♃", star:"氐", body:"手臂、乳房"},
+  {cn:"房宿", sa:"Anuradha",         planet:"Saturn",  sym:"♄", star:"房", body:"胃、腹部"},
+  {cn:"心宿", sa:"Jyeshtha",         planet:"Mercury", sym:"☿", star:"心", body:"右側腰腹"},
+  {cn:"尾宿", sa:"Mula",             planet:"Ketu",    sym:"☋", star:"尾", body:"雙腳、腳部"},
+  {cn:"箕宿", sa:"Purva Ashadha",    planet:"Venus",   sym:"♀", star:"箕", body:"大腿"},
+  {cn:"斗宿", sa:"Uttara Ashadha",   planet:"Sun",     sym:"☉", star:"斗", body:"大腿、腰"},
+  {cn:"女宿", sa:"Shravana",         planet:"Moon",    sym:"☽", star:"女", body:"耳朵"},
+  {cn:"虛宿", sa:"Dhanishta",        planet:"Mars",    sym:"♂", star:"虛", body:"背部"},
+  {cn:"危宿", sa:"Shatabhisha",      planet:"Rahu",    sym:"☊", star:"危", body:"下顎、右腿"},
+  {cn:"室宿", sa:"Purva Bhadrapada", planet:"Jupiter", sym:"♃", star:"室", body:"左側腰、小腿"},
+  {cn:"壁宿", sa:"Uttara Bhadrapada",planet:"Saturn",  sym:"♄", star:"壁", body:"小腿、腳"},
+  {cn:"奎宿", sa:"Revati",           planet:"Mercury", sym:"☿", star:"奎", body:"腳、腳踝"}
+];
+
+/* ===== 幾何 ===== */
+const R_OUT  = 400;
+const R_NAK  = 272;
+const R_STAR = 198;
+const R_CORE = 94;
+
+const NS = "http://www.w3.org/2000/svg";
+const wheel = document.getElementById("wheel");
+
+function el(name, attrs={}){
+  const n = document.createElementNS(NS, name);
+  for(const k in attrs) n.setAttribute(k, attrs[k]);
+  return n;
+}
+
+/* 數學角 θ（逆時針為正），0° = 3 點方向。SVG y 軸向下故取負。 */
+const toXY = (r, deg) => {
+  const t = deg * Math.PI / 180;
+  return [ r * Math.cos(t), -r * Math.sin(t) ];
+};
+
+/* ===== 錨點：用「已行進角度」traveled 遞增計算 =====
+   方向：9 點(180°) → 6 點(270°) → 3 點(360°/0°) → 12 點(450°/90°) → 回 9 點(540°/180°)
+   數學角 = 180 + traveled （走逆時針，角度增加）
+   traveled 錨點：
+     婁宿 idx0  = 0
+     井宿 idx6  = 90
+     角宿 idx13 = 180
+     斗宿 idx20 = 270
+     奎宿 idx27 = 360
+*/
+const traveledAnchor = [
+  {idx:0,  t:0},
+  {idx:6,  t:90},
+  {idx:13, t:180},
+  {idx:20, t:270},
+  {idx:27, t:360}
+];
+
+const startAngle = new Array(28);
+
+for(let a=0; a<traveledAnchor.length-1; a++){
+  const seg = traveledAnchor[a], next = traveledAnchor[a+1];
+  const span = next.idx - seg.idx;
+  for(let k=0; k<span; k++){
+    const t = seg.t + (next.t - seg.t) * (k / span);
+    startAngle[seg.idx + k] = 180 + t;   // 數學角
+  }
+}
+startAngle[27] = 180 + 360;   // 奎宿終點 = 540°
+
+const widthOf = i => (startAngle[i+1] - startAngle[i]);   // 恆為正（逆時針）
+
+/* ===== 底環 ===== */
+wheel.appendChild(el("circle",{r:R_OUT,  class:"ring-outer"}));
+wheel.appendChild(el("circle",{r:R_NAK,  class:"ring-band"}));
+wheel.appendChild(el("circle",{r:R_STAR, class:"ring-band alt"}));
+wheel.appendChild(el("circle",{r:R_CORE, class:"ring-band"}));
+
+/* ===== 27 扇區 ===== */
+data.forEach((d,i)=>{
+  const aStart = startAngle[i];
+  const aEnd   = startAngle[i+1];
+  const aMid   = (aStart + aEnd) / 2;
+
+  /* 徑向分界線 */
+  const [l1x,l1y] = toXY(R_CORE, aStart);
+  const [l2x,l2y] = toXY(R_OUT,  aStart);
+  wheel.appendChild(el("line",{
+    x1:l1x, y1:l1y, x2:l2x, y2:l2y, class:"sector-line"
+  }));
+
+  /* 文字沿切線、保持正立
+     aMid 為數學角；SVG 旋轉角 = -(aMid) + 90 使字底朝圓心 */
+  let rot = -aMid + 90;
+  const norm = ((rot % 360) + 360) % 360;
+  if (norm > 90 && norm < 270) rot += 180;
+
+  /* 月宿中文名（外圈） */
+  const [nx,ny] = toXY((R_OUT + R_NAK)/2 + 6, aMid);
+  const tCn = el("text",{
+    x:nx, y:ny, class:"nak-label",
+    "text-anchor":"middle","dominant-baseline":"middle",
+    transform:`rotate(${rot} ${nx} ${ny})`
+  });
+  tCn.textContent = d.cn;
+  wheel.appendChild(tCn);
+
+  /* 梵名（月宿環內側，徑向間距足夠避免重疊） */
+  const [sx,sy] = toXY((R_OUT + R_NAK)/2 - 28, aMid);
+  const tSa = el("text",{
+    x:sx, y:sy, class:"sa-label",
+    "text-anchor":"middle","dominant-baseline":"middle",
+    transform:`rotate(${rot} ${sx} ${sy})`
+  });
+  tSa.textContent = d.sa;
+  wheel.appendChild(tSa);
+
+  /* 行星符號 */
+  const [px,py] = toXY(R_NAK - 24, aMid);
+  const tP = el("text",{
+    x:px, y:py, class:"planet-label",
+    "text-anchor":"middle","dominant-baseline":"middle"
+  });
+  tP.textContent = d.sym;
+  wheel.appendChild(tP);
+
+  /* 中原星宿字 */
+  const [tx,ty] = toXY((R_NAK + R_STAR)/2 - 4, aMid);
+  const tStar = el("text",{
+    x:tx, y:ty, class:"star-label",
+    "text-anchor":"middle","dominant-baseline":"middle"
+  });
+  tStar.textContent = d.star;
+  wheel.appendChild(tStar);
+});
+
+/* 閉合線（奎宿終點 = 婁宿起點） */
+(()=>{
+  const [x1,y1] = toXY(R_CORE, startAngle[27]);
+  const [x2,y2] = toXY(R_OUT,  startAngle[27]);
+  wheel.appendChild(el("line",{x1,y1,x2,y2,class:"sector-line"}));
+})();
+
+/* ===== 四正方位標示 ===== */
+const cardinals = [
+  {deg:180, main:"婁宿", note:"9 點"},
+  {deg:270, main:"井宿", note:"6 點"},
+  {deg:0,   main:"角宿", note:"3 點"},
+  {deg:90,  main:"斗宿", note:"12 點"}
+];
+cardinals.forEach(c=>{
+  const [x,y] = toXY(R_OUT + 32, c.deg);
+  const t = el("text",{
+    x, y, class:"cardinal-label",
+    "text-anchor":"middle","dominant-baseline":"middle"
+  });
+  t.textContent = c.main;
+  wheel.appendChild(t);
+
+  const [x2,y2] = toXY(R_OUT + 55, c.deg);
+  const n = el("text",{
+    x:x2, y:y2, class:"deg-label",
+    "text-anchor":"middle","dominant-baseline":"middle"
+  });
+  n.textContent = c.note;
+  wheel.appendChild(n);
+
+  const [ax,ay] = toXY(R_CORE, c.deg);
+  const [bx,by] = toXY(R_OUT,  c.deg);
+  wheel.appendChild(el("line",{
+    x1:ax,y1:ay,x2:bx,y2:by,class:"cardinal-line"
+  }));
+});
+
+/* 中心文字 */
+const core = el("text",{
+  x:0, y:0, "text-anchor":"middle","dominant-baseline":"middle",
+  class:"core-label"
+});
+core.textContent = "逆時針";
+wheel.appendChild(core);
+
+/* ===== 表格 ===== */
+const tb = document.getElementById("tbody");
+data.forEach((d,i)=>{
+  const tr = document.createElement("tr");
+  tr.innerHTML = `
+    <td class="num">${i+1}</td>
+    <td>${d.cn}</td>
+    <td>${d.sa}</td>
+    <td class="planet">${d.planet} <span class="sym">${d.sym}</span></td>
+    <td class="star">${d.star}</td>
+    <td class="body">${d.body}</td>`;
+  tb.appendChild(tr);
+});
+</script>
+</body>
+</html>
