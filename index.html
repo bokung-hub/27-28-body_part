@@ -121,9 +121,6 @@
                     <i class="fa-brands fa-huggingface text-yellow-400 text-sm"></i>
                     <span class="hidden md:inline">Hugging Face 部署說明</span>
                 </button>
-                <button id="mobileMenuBtn" onclick="toggleSidebar()" class="md:hidden p-2 text-indigo-200 hover:text-gold-400 focus:outline-none">
-                    <i class="fa-solid fa-bars text-xl"></i>
-                </button>
             </div>
         </div>
     </header>
@@ -145,7 +142,8 @@
                 <span class="text-indigo-400 text-xs whitespace-nowrap"><i class="fa-solid fa-filter mr-1"></i>快捷切換:</span>
                 <button onclick="resetToOverview()" class="px-3 py-1.5 rounded-full bg-indigo-900/40 hover:bg-gold-500/20 border border-indigo-500/30 text-indigo-200 hover:text-gold-400 whitespace-nowrap transition">總覽卡片</button>
                 <button onclick="loadModule('27月宿身體部位圓盤fable4.html', '27月宿身體部位圓盤 fable')" class="px-3 py-1.5 rounded-full bg-indigo-900/40 hover:bg-gold-500/20 border border-indigo-500/30 text-indigo-200 hover:text-gold-400 whitespace-nowrap transition">27宿圓盤</button>
-                <button onclick="loadModule('12地支身體部位對應.html', '12地支身體部位對應')" class="px-3 py-1.5 rounded-full bg-indigo-900/40 hover:bg-gold-500/20 border border-indigo-500/30 text-indigo-200 hover:text-gold-400 whitespace-nowrap transition">12地支</button>
+                <button onclick="loadModule('政餘二十八宿・地支・人體部位綜合對照.html', '政餘二十八宿綜合對照')" class="px-3 py-1.5 rounded-full bg-indigo-900/40 hover:bg-gold-500/20 border border-indigo-500/30 text-indigo-200 hover:text-gold-400 whitespace-nowrap transition">宿耀地支綜合對照</button>
+                <button onclick="loadModule('政餘二十八宿・地支・人體部位綜合對照（雙欄版）.html', '雙欄綜合對照')" class="px-3 py-1.5 rounded-full bg-indigo-900/40 hover:bg-gold-500/20 border border-indigo-500/30 text-indigo-200 hover:text-gold-400 whitespace-nowrap transition">雙欄對照表</button>
             </div>
         </div>
 
@@ -245,6 +243,42 @@
                     </div>
                 </div>
 
+                <!-- Card 6 (Replaced) -->
+                <div class="module-card glass-card rounded-2xl p-6 flex flex-col justify-between group cursor-pointer" data-title="政餘二十八宿・地支・人體部位綜合對照" onclick="loadModule('政餘二十八宿・地支・人體部位綜合對照.html', '政餘二十八宿・地支・人體部位綜合對照')">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="w-10 h-10 rounded-xl bg-indigo-900/50 border border-gold-500/30 flex items-center justify-center text-rose-400 text-lg group-hover:scale-110 transition">
+                                <i class="fa-solid fa-table-cells"></i>
+                            </span>
+                            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-rose-500/10 border border-rose-500/20 text-rose-300">綜合對照</span>
+                        </div>
+                        <h3 class="text-lg font-serif font-bold text-indigo-100 group-hover:text-gold-400 transition mb-2">政餘二十八宿・地支・人體部位綜合對照</h3>
+                        <p class="text-xs text-indigo-300/70 line-clamp-2">整合二十八星宿、十二地支與身體部位之單頁綜合對照圖譜。</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-indigo-500/10 flex items-center justify-between text-xs text-gold-500/80 font-medium">
+                        <span>開啟檢視視窗</span>
+                        <i class="fa-solid fa-arrow-right transform group-hover:translate-x-1 transition"></i>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="module-card glass-card rounded-2xl p-6 flex flex-col justify-between group cursor-pointer" data-title="政餘二十八宿・地支・人體部位綜合對照（雙欄版）" onclick="loadModule('政餘二十八宿・地支・人體部位綜合對照（雙欄版）.html', '政餘二十八宿・地支・人體部位綜合對照（雙欄版）')">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="w-10 h-10 rounded-xl bg-indigo-900/50 border border-gold-500/30 flex items-center justify-center text-sky-400 text-lg group-hover:scale-110 transition">
+                                <i class="fa-solid fa-columns"></i>
+                            </span>
+                            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-sky-500/10 border border-sky-500/20 text-sky-300">雙欄版對照</span>
+                        </div>
+                        <h3 class="text-lg font-serif font-bold text-indigo-100 group-hover:text-gold-400 transition mb-2">政餘二十八宿・地支・人體部位綜合對照（雙欄版）</h3>
+                        <p class="text-xs text-indigo-300/70 line-clamp-2">雙欄併排排版之綜合對照表，方便同步對比二十八宿、地支與身體解剖部位關係。</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-indigo-500/10 flex items-center justify-between text-xs text-gold-500/80 font-medium">
+                        <span>開啟檢視視窗</span>
+                        <i class="fa-solid fa-arrow-right transform group-hover:translate-x-1 transition"></i>
+                    </div>
+                </div>
+
             </div>
 
             <!-- DYNAMIC IFRAME VIEWER CONTAINER (Hidden by default) -->
@@ -303,13 +337,15 @@
                 <ol class="list-decimal list-inside space-y-2 bg-cosmic-900/60 p-3 rounded-lg border border-indigo-500/20">
                     <li>建立 Spaces，選擇 SDK 為 <b class="text-gold-400">Static (HTML)</b>。</li>
                     <li>將本檔命名為 <code class="text-cyanGlow font-mono bg-black/40 px-1 py-0.5 rounded">index.html</code> 並上傳至根目錄。</li>
-                    <li>確保以下5個相對應 HTML 子檔案上傳至同一個目錄：
+                    <li>確保以下 7 個相對應 HTML 子檔案上傳至同一個目錄：
                         <ul class="list-disc list-inside pl-4 mt-1 space-y-1 text-indigo-300">
                             <li>27月宿身體部位圓盤fable4.html</li>
                             <li>政餘星命與二十八宿病理總覽.html</li>
                             <li>政餘28宿病理總覽2.html</li>
                             <li>政餘28宿對應身體部位.html</li>
                             <li>12地支身體部位對應.html</li>
+                            <li>政餘二十八宿・地支・人體部位綜合對照.html</li>
+                            <li>政餘二十八宿・地支・人體部位綜合對照（雙欄版）.html</li>
                         </ul>
                     </li>
                 </ol>
